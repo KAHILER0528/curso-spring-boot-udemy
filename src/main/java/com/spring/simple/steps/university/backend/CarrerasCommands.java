@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class CarrerasCommands implements CommandLineRunner {
 
@@ -14,7 +16,7 @@ public class CarrerasCommands implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Carrera ingSistemas = new Carrera(null, "Ingenieria en Sistma", 60, 5);
+       /* Carrera ingSistemas = new Carrera(null, "Ingenieria en Sistema", 60, 5);
         Carrera ingIndustrial = new Carrera(null, "Ingenieria Industrial", 55, 5);
         Carrera ingAlimentos = new Carrera(null, "Ingenieria en Alimentos", 53, 5);
         Carrera ingElectronica = new Carrera(null, "Ingenieria Electronica", 45, 5);
@@ -30,7 +32,19 @@ public class CarrerasCommands implements CommandLineRunner {
         servicioCarrera.save(licSistemas);
         servicioCarrera.save(licTurismo);
         servicioCarrera.save(licYoga);
-        servicioCarrera.save(licRecursos);
+        servicioCarrera.save(licRecursos);*/
+
+        /*List<Carrera> carreras = (List<Carrera>) servicioCarrera.findCarrerasByNameContains("Sistema");
+        carreras.forEach(System.out::println);
+
+        List<Carrera> carrerasIgnorCase = (List<Carrera>) servicioCarrera.findCarrerasByNameContainsIgnoreCase("SISTEMA");
+        carrerasIgnorCase.forEach(System.out::println);
+
+        List<Carrera> carrerasIgnorCase1 = (List<Carrera>) servicioCarrera.findCarrerasByNameContainsIgnoreCase("sistema");
+        carrerasIgnorCase1.forEach(System.out::println);*/
+
+        List<Carrera> carreras = (List<Carrera>) servicioCarrera.findCarrerasByQuantityYear(3);
+        carreras.forEach(System.out::println);
     }
 
 }
