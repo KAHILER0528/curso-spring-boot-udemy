@@ -41,10 +41,10 @@ public class CarrerasCommands implements CommandLineRunner {
         carrerasIgnorCase.forEach(System.out::println);
 
         List<Carrera> carrerasIgnorCase1 = (List<Carrera>) servicioCarrera.findCarrerasByNameContainsIgnoreCase("sistema");
-        carrerasIgnorCase1.forEach(System.out::println);*/
+        carrerasIgnorCase1.forEach(System.out::println);
 
         List<Carrera> carreras = (List<Carrera>) servicioCarrera.findCarrerasByQuantityYear(3);
-        carreras.forEach(System.out::println);
+        carreras.forEach(System.out::println);*/
     }
 
 }

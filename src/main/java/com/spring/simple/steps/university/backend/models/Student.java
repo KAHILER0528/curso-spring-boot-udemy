@@ -24,9 +24,19 @@ public class Student extends Person {
         super(id, name, lastName, dni, direction);
     }
 
+    public Carrera getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(Carrera carrera) {
+        this.carrera = carrera;
+    }
+
     @Override
     public String toString() {
         return super.toString()+
                 "Student{}";
     }
+
+
 }
